@@ -5,5 +5,12 @@ yarn.lock
 bun.lock
 bun.lockb
 
+# Hidden tool dirs and build outputs
+.gemini
+.claude
+.svelte-kit
+.wrangler
+worker-configuration.d.ts
+
 # Miscellaneous
 /static/
