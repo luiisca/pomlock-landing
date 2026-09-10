@@ -1,7 +1,7 @@
 export const COLOR_DARK_BG = '#023047';
 export const COLOR_LIGHT_BG = '#8ecae6';
-export const COLOR_PRIMARY = '#ffb703';
-export const COLOR_ACCENT = '#fb8500';
+export const COLOR_PRIMARY = '#fb8500';
+export const COLOR_ACCENT = '#ffb703';
 export const COLOR_CYAN = '#219ebc';
 
 export const GITHUB_REPO = 'https://github.com/luiisca/pomlock';

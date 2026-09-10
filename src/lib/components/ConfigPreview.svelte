@@ -2,69 +2,83 @@
 	import { SAMPLE_CONFIG } from '$lib/constants';
 
 	const WAYBAR_JSON_SNIPPET = `"custom/pomodoro": {
-    "exec": "python3 /path/to/waybar.py",
-    "interval": 1,
-    "return-type": "json",
-    "on-click": "python3 /path/to/waybar.py left",
-    "on-click-right": "python3 /path/to/waybar.py right"
+  "exec": "python3 /path/to/waybar.py",
+  "interval": 1,
+  "return-type": "json",
+  "on-click": "python3 /path/to/waybar.py left",
+  "on-click-right": "python3 /path/to/waybar.py right"
 }`;
 </script>
 
-<section id="config" class="relative z-10 px-4 py-12 font-mono">
-	<div class="mx-auto max-w-5xl">
-		<!-- Section header -->
-		<div class="mb-8 border-b border-[var(--border-ui)] pb-4">
-			<div class="mb-1 flex items-center gap-2 text-xs text-[var(--color-accent)]">
-				<span>///</span>
-				<span>EXTENSIBILITY & INTEGRATION</span>
+<section id="config" class="border-b-2 border-[var(--border-ui)] bg-[var(--bg-app)] font-mono">
+	<!-- Section header bar -->
+	<div
+		class="flex flex-col justify-between gap-2 border-b-2 border-[var(--border-ui)] bg-[var(--bg-panel)] px-4 py-3 sm:flex-row sm:items-center"
+	>
+		<div>
+			<div class="mb-0.5 flex items-center gap-2 text-xs font-bold text-[var(--color-primary)]">
+				<span>[06 // CONFIGURATION & EXTENSIBILITY]</span>
 			</div>
-			<h2 class="text-xl font-bold text-[var(--color-primary)] sm:text-3xl">
+			<h2 class="text-lg font-bold text-[var(--text-main)] sm:text-2xl">
 				Plain text configuration, native shell hooks.
 			</h2>
-			<p class="mt-2 max-w-2xl text-sm text-[var(--text-muted)] sm:text-base">
-				Settings live at <code class="text-[var(--color-primary)]"
-					>~/.config/pomlock/pomlock.conf</code
-				>. Edit directly in your text editor or inside the app by pressing
-				<kbd class="border border-[var(--border-ui)] px-1">6</kbd>.
-			</p>
 		</div>
+		<span class="text-xs text-[var(--text-dim)]">~/.config/pomlock/pomlock.conf</span>
+	</div>
 
-		<!-- Configuration split view -->
-		<div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
-			<!-- Config file viewer -->
-			<div class="tui-shadow border border-[var(--border-ui)] bg-[var(--bg-terminal)]">
+	<!-- Configuration split box -->
+	<div
+		class="grid grid-cols-1 divide-y-2 divide-[var(--border-ui)] bg-[var(--bg-card)] lg:grid-cols-2 lg:divide-x-2 lg:divide-y-0"
+	>
+		<!-- Left Box: Config file viewer -->
+		<div class="flex flex-col justify-between p-4 sm:p-6">
+			<div>
 				<div
-					class="flex items-center justify-between border-b border-[var(--border-ui)] bg-[var(--bg-panel)] px-4 py-2 text-xs"
+					class="mb-3 flex items-center justify-between border-b border-[var(--border-subtle)] pb-2 text-xs font-bold text-[var(--text-dim)]"
 				>
-					<span class="font-bold text-[var(--color-primary)]">~/.config/pomlock/pomlock.conf</span>
-					<span class="text-[var(--text-dim)]">INI FORMAT</span>
+					<span class="font-mono text-[var(--color-primary)]">~/.config/pomlock/pomlock.conf</span>
+					<span>INI FORMAT</span>
 				</div>
-				<pre
-					class="overflow-x-auto p-4 text-xs leading-relaxed text-[var(--text-main)] sm:text-sm"><code
-						>{SAMPLE_CONFIG}</code
-					></pre>
+				<p class="mb-3 text-xs text-[var(--text-muted)]">
+					Edit directly in your text editor or inside the TUI app by pressing <kbd
+						class="border border-[var(--border-ui)] bg-[var(--bg-panel)] px-1.5 py-0.5 font-bold text-[var(--color-primary)]"
+						>6</kbd
+					>.
+				</p>
+				<div
+					class="tui-shadow-sm overflow-x-auto border-2 border-[var(--border-ui)] bg-[var(--bg-terminal)] p-4 text-xs leading-relaxed text-[var(--terminal-text)] sm:text-sm"
+				>
+					<pre class="font-mono"><code>{SAMPLE_CONFIG}</code></pre>
+				</div>
 			</div>
 
-			<!-- Status bar integration -->
 			<div
-				class="tui-shadow flex flex-col justify-between border border-[var(--border-ui)] bg-[var(--bg-terminal)]"
+				class="mt-4 flex justify-between border-t border-[var(--border-subtle)] pt-2 text-xs text-[var(--text-dim)]"
 			>
-				<div>
-					<div
-						class="flex items-center justify-between border-b border-[var(--border-ui)] bg-[var(--bg-panel)] px-4 py-2 text-xs"
-					>
-						<span class="font-bold text-[var(--color-primary)]">STATUS BAR & WAYBAR HOOK</span>
-						<span class="text-[var(--text-dim)]">/tmp/pomlock.json</span>
-					</div>
-					<div class="space-y-3 p-4 text-xs text-[var(--text-muted)] sm:text-sm">
-						<p>
-							Pomlock writes its live state to <code class="text-[var(--color-accent)]"
-								>/tmp/pomlock.json</code
-							> every second while running:
-						</p>
-						<pre
-							class="overflow-x-auto border border-[var(--border-subtle)] bg-[var(--bg-card)] p-2.5 text-[11px] text-[var(--text-main)]"><code
-								>&#123;
+				<span>SECTIONS: [general], [presets], [overlay]</span>
+				<span>HOT-RELOAD: YES</span>
+			</div>
+		</div>
+
+		<!-- Right Box: Status bar integration -->
+		<div class="flex flex-col justify-between p-4 sm:p-6">
+			<div>
+				<div
+					class="mb-3 flex items-center justify-between border-b border-[var(--border-subtle)] pb-2 text-xs font-bold text-[var(--text-dim)]"
+				>
+					<span class="font-mono text-[var(--color-primary)]">WAYBAR & POLYBAR HOOK</span>
+					<span>/tmp/pomlock.json</span>
+				</div>
+				<p class="mb-3 text-xs text-[var(--text-muted)]">
+					Pomlock writes live state to <code class="font-bold text-[var(--color-primary)]"
+						>/tmp/pomlock.json</code
+					> every second while running:
+				</p>
+				<div
+					class="tui-shadow-sm mb-4 overflow-x-auto border-2 border-[var(--border-ui)] bg-[var(--bg-terminal)] p-3 text-xs text-[var(--terminal-muted)]"
+				>
+					<pre class="font-mono"><code
+							>&#123;
   "action": "pomodoro",
   "time": 1500,
   "start_time": 1725580800.0,
@@ -72,25 +86,27 @@
   "total-cycles": 4,
   "state": "running"
 &#125;</code
-							></pre>
-						<p class="text-xs">
-							Add this module to your Waybar configuration to display timer status directly in your
-							status bar:
-						</p>
-						<pre
-							class="overflow-x-auto border border-[var(--border-subtle)] bg-[var(--bg-card)] p-2.5 text-[11px] text-[var(--color-primary)]"><code
-								>{WAYBAR_JSON_SNIPPET}</code
-							></pre>
-					</div>
+						></pre>
 				</div>
 
+				<p class="mb-2 text-xs text-[var(--text-muted)]">
+					Add this custom module to your Waybar configuration to display timer status in your bar:
+				</p>
 				<div
-					class="border-t border-[var(--border-ui)] bg-[var(--bg-panel)] p-3 text-xs text-[var(--text-dim)]"
+					class="tui-shadow-sm overflow-x-auto border-2 border-[var(--border-ui)] bg-[var(--bg-terminal)] p-3 font-mono text-xs text-[var(--color-primary)]"
 				>
-					Script callback support: <code class="text-[var(--text-main)]"
-						>pomlock --callback /path/to/script.sh</code
-					>
+					<pre><code>{WAYBAR_JSON_SNIPPET}</code></pre>
 				</div>
+			</div>
+
+			<div
+				class="mt-4 flex flex-wrap justify-between gap-1 border-t border-[var(--border-subtle)] pt-2 text-xs text-[var(--text-dim)]"
+			>
+				<span
+					>SCRIPT CALLBACK: <code class="font-bold text-[var(--text-main)]"
+						>pomlock --callback /path/to/script.sh</code
+					></span
+				>
 			</div>
 		</div>
 	</div>

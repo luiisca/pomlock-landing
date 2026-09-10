@@ -2,10 +2,8 @@
 	import { GITHUB_RELEASES, GITHUB_REPO, TERMINAL_TROVE_URL } from '$lib/constants';
 </script>
 
-<footer
-	class="relative z-10 mt-16 border-t border-[var(--border-ui)] bg-[var(--bg-app)] py-8 font-mono text-xs text-[var(--text-muted)]"
->
-	<div class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-4 sm:flex-row">
+<footer class="relative z-10 bg-[var(--bg-app)] py-6 font-mono text-xs text-[var(--text-main)]">
+	<div class="flex flex-col items-center justify-between gap-4 px-4 sm:flex-row">
 		<!-- Made with love message -->
 		<p
 			class="flex flex-wrap items-center justify-center gap-2 text-center sm:justify-start sm:text-left"
@@ -16,14 +14,14 @@
 				href={GITHUB_REPO}
 				target="_blank"
 				rel="noreferrer"
-				class="text-[var(--color-primary)] hover:underline"
+				class="font-bold text-[var(--color-primary)] hover:underline"
 			>
 				Check out on GitHub
 			</a>
 		</p>
 
 		<!-- Meta links -->
-		<div class="flex items-center gap-4 text-[11px] text-[var(--text-dim)]">
+		<div class="flex items-center gap-4 text-xs font-semibold text-[var(--text-dim)]">
 			<a
 				href={GITHUB_RELEASES}
 				target="_blank"

@@ -17,62 +17,66 @@
 	}
 </script>
 
-<section id="features" class="relative z-10 px-4 py-12 font-mono">
-	<div class="mx-auto max-w-5xl">
-		<!-- Section header -->
-		<div class="mb-8 border-b border-[var(--border-ui)] pb-4">
-			<div class="mb-1 flex items-center gap-2 text-xs text-[var(--color-accent)]">
-				<span>///</span>
-				<span>MECHANICS</span>
+<section id="features" class="border-b-2 border-[var(--border-ui)] bg-[var(--bg-app)] font-mono">
+	<!-- Section header bar -->
+	<div
+		class="flex flex-col justify-between gap-2 border-b-2 border-[var(--border-ui)] bg-[var(--bg-panel)] px-4 py-3 sm:flex-row sm:items-center"
+	>
+		<div>
+			<div class="mb-0.5 flex items-center gap-2 text-xs font-bold text-[var(--color-primary)]">
+				<span>[04 // ARCHITECTURAL FEATURES]</span>
 			</div>
-			<h2 class="text-xl font-bold text-[var(--color-primary)] sm:text-3xl">
+			<h2 class="text-lg font-bold text-[var(--text-main)] sm:text-2xl">
 				Enforced rest, not voluntary suggestions.
 			</h2>
-			<p class="mt-2 max-w-2xl text-sm text-[var(--text-muted)] sm:text-base">
-				Traditional timers rely on willpower. When deadlines approach, willpower loses. Pomlock
-				treats rest like a system interrupt.
-			</p>
 		</div>
+		<span class="text-xs text-[var(--text-dim)]">HARDWARE INTERRUPT MODEL</span>
+	</div>
 
-		<!-- Interactive glowing cards grid -->
-		<!-- svelte-ignore a11y_no_static_element_interactions -->
-		<div
-			id="cards-grid"
-			onmousemove={handleMouseMove}
-			class="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3"
-		>
-			{#each FEATURES as feat (feat.tag)}
-				<div
-					class="tui-glow-card tui-shadow-sm relative flex flex-col justify-between overflow-hidden border border-[var(--border-ui)] bg-[var(--bg-card)] p-4"
-				>
-					<div class="relative z-20">
-						<!-- Technical tag header -->
-						<div
-							class="mb-3 flex items-center justify-between border-b border-[var(--border-subtle)] pb-2 text-[11px]"
-						>
-							<span class="font-bold text-[var(--color-primary)]">[{feat.tag}]</span>
-							<span class="text-[var(--text-dim)]">+---+</span>
-						</div>
-
-						<!-- Feature title -->
-						<h3 class="mb-2 text-base font-bold text-[var(--text-main)]">
-							{feat.title}
-						</h3>
-
-						<!-- Feature copy adhering to Human-Sounding Writer rules -->
-						<p class="text-xs leading-relaxed text-[var(--text-muted)] sm:text-sm">
-							{feat.description}
-						</p>
-					</div>
-
+	<!-- Interactive glowing cards modular grid -->
+	<!-- svelte-ignore a11y_no_static_element_interactions -->
+	<div
+		id="cards-grid"
+		onmousemove={handleMouseMove}
+		class="grid grid-cols-1 divide-y-2 divide-[var(--border-ui)] border-b-2 border-[var(--border-ui)] md:grid-cols-2 md:divide-y-0 lg:grid-cols-3"
+	>
+		{#each FEATURES as feat, idx (feat.tag)}
+			<div
+				class="tui-glow-card relative flex flex-col justify-between overflow-hidden border-b-2 border-[var(--border-ui)] bg-[var(--bg-card)] p-5 md:border-b-0 {idx %
+					3 !==
+				2
+					? 'lg:border-r-2'
+					: ''} {idx % 2 !== 1 ? 'md:border-r-2 lg:border-r-0' : ''} {idx < 3
+					? 'lg:border-b-2'
+					: ''} {idx < 4 ? 'md:border-b-2 lg:border-b-0' : ''}"
+			>
+				<div class="relative z-20">
+					<!-- Technical tag header -->
 					<div
-						class="relative z-20 mt-4 flex items-center justify-between border-t border-[var(--border-subtle)] pt-2 text-[10px] text-[var(--text-dim)]"
+						class="mb-3 flex items-center justify-between border-b border-[var(--border-subtle)] pb-2 text-xs"
 					>
-						<span>STATE: ARMED</span>
-						<span>SYS: OK</span>
+						<span class="font-bold text-[var(--color-primary)]">[{feat.tag}]</span>
+						<span class="text-[var(--text-dim)]">+---+</span>
 					</div>
+
+					<!-- Feature title -->
+					<h3 class="mb-2 text-base font-bold text-[var(--text-main)]">
+						{feat.title}
+					</h3>
+
+					<!-- Feature copy adhering to Human-Sounding Writer rules -->
+					<p class="text-xs leading-relaxed text-[var(--text-muted)] sm:text-sm">
+						{feat.description}
+					</p>
 				</div>
-			{/each}
-		</div>
+
+				<div
+					class="relative z-20 mt-6 flex items-center justify-between border-t border-[var(--border-subtle)] pt-2 text-[11px] text-[var(--text-dim)]"
+				>
+					<span>MODULE_ID: 0{idx + 1}</span>
+					<span class="font-bold text-[var(--color-primary)]">ARMED</span>
+				</div>
+			</div>
+		{/each}
 	</div>
 </section>
