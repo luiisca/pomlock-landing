@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { GITHUB_REPO, GITHUB_RELEASES, ThemeMode } from '$lib/constants';
+	import { GITHUB_REPO, GITHUB_RELEASES, ThemeMode, TOOL_VERSION } from '$lib/constants';
 
 	interface Props {
 		theme: ThemeMode;
@@ -29,7 +29,7 @@
 			<span
 				class="border border-[var(--border-ui)] bg-[var(--bg-panel)] px-2 py-0.5 text-xs font-bold text-[var(--color-primary)]"
 			>
-				v3.0.0
+				{TOOL_VERSION}
 			</span>
 			<span class="hidden text-[var(--text-dim)] md:inline"> // LINUX_EVDEV_INPUT_LOCK </span>
 		</div>

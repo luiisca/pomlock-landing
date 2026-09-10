@@ -1,5 +1,4 @@
 <script lang="ts">
-	// Large screen-wide retro industrial header inspired by the Portal HUD
 </script>
 
 <div class="border-b-2 border-[var(--border-ui)] bg-[var(--bg-panel)] font-mono">
@@ -60,12 +59,6 @@
 			<div
 				class="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs font-bold text-[var(--text-muted)] sm:gap-3 sm:text-sm"
 			>
-				<span
-					class="border border-[var(--border-ui)] bg-[var(--bg-app)] px-2 py-0.5 font-bold text-[var(--color-primary)]"
-				>
-					v3.0.0
-				</span>
-				<span class="text-[var(--text-dim)]">//</span>
 				<span class="tracking-wide text-[var(--text-main)]">LINUX EVDEV INPUT BLOCKER</span>
 				<span class="text-[var(--text-dim)]">//</span>
 				<span class="font-bold text-[var(--color-primary)]">ZERO-WILLPOWER REST</span>

@@ -2,11 +2,11 @@
 	import { SAMPLE_CONFIG } from '$lib/constants';
 
 	const WAYBAR_JSON_SNIPPET = `"custom/pomodoro": {
-  "exec": "python3 /path/to/waybar.py",
+  "exec": "/path/to/waybar.py",
   "interval": 1,
   "return-type": "json",
-  "on-click": "python3 /path/to/waybar.py left",
-  "on-click-right": "python3 /path/to/waybar.py right"
+  "on-click": "/path/to/waybar.py left",
+  "on-click-right": "/path/to/waybar.py right"
 }`;
 </script>
 

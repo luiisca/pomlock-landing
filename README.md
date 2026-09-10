@@ -1,42 +1,7 @@
-# sv
+# pomlock landing page
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+landing page for [pomlock](https://github.com/luiisca/pomlock), a tool that enforces breaks by grabbing every input device through `evdev`.
 
-## Creating a project
+retro, brutalist design inspired by [Portal](https://portal.thenifty.com/), [this Pinterest pin](https://pin.it/4PkdA0zWy), [Basalt](https://basalt.page/), and [a landing page](https://pnc-landing.pages.dev/) I built some time ago for an Obsidian plugin of my own.
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```sh
-# create a new project
-npx sv create my-app
-```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-npx sv@0.17.0 create --template minimal --types ts --add prettier eslint tailwindcss="plugins:typography" sveltekit-adapter="adapter:cloudflare+cfTarget:workers" mdsvex ai-tools="ide:claude-code,gemini+delivery:plugin+tools:mcp,svelte-code-writer,svelte-core-bestpractices,svelte-file-editor+mcpSetup:remote" --install npm pomlock-landing
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+generated with Gemini Flash 3.8, then refined by hand until it matched what I had in mind.
