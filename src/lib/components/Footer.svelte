@@ -37,10 +37,10 @@
 				rel="noreferrer"
 				class="hover:text-[var(--color-primary)]"
 			>
-				terminal trove
+				terminal trove (soon)
 			</a>
 			<span>•</span>
-			<span>mit license</span>
+			<span>GPL-3.0 license</span>
 		</div>
 	</div>
 </footer>

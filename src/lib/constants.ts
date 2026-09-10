@@ -34,6 +34,7 @@ export interface InstallOption {
 	readonly manager: PackageManager;
 	readonly label: string;
 	readonly command: string;
+	readonly comingSoon?: boolean;
 }
 
 export const INSTALL_OPTIONS: readonly InstallOption[] = [
@@ -50,7 +51,8 @@ export const INSTALL_OPTIONS: readonly InstallOption[] = [
 	{
 		manager: PackageManager.Aur,
 		label: 'aur',
-		command: 'yay -S pomlock'
+		command: 'yay -S pomlock',
+		comingSoon: true
 	}
 ] as const;
 
@@ -110,10 +112,10 @@ export const FEATURES: readonly FeatureItem[] = [
 			'Writes live state to /tmp/pomlock.json every second. Connects directly to Waybar, Polybar, or your custom shell scripts.'
 	},
 	{
-		tag: 'FAILSAFE',
-		title: 'Emergency restore',
+		tag: 'ACTIVITIES & STREAKS',
+		title: 'Activity setup & daily streaks',
 		description:
-			'Devices release cleanly on SIGINT or app exit. A simple virtual console switch (Ctrl+Alt+F3) lets you kill the process if needed.'
+			'Categorize sessions under custom activities and track consistency with gap-respecting daily streaks across days and weeks.'
 	}
 ] as const;
 

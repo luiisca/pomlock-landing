@@ -80,7 +80,7 @@
 		<div class="flex items-center gap-2">
 			<span>░▒▓ PORTAL ENTRANCE</span>
 			<span>•</span>
-			<span>TERMINAL TROVE VERIFIED</span>
+			<span>TERMINAL TROVE (SOON)</span>
 			<span class="hidden sm:inline">•</span>
 			<span class="hidden sm:inline">NO ELECTRON BLOAT</span>
 		</div>

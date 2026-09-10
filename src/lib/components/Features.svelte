@@ -27,7 +27,7 @@
 				<span>[04 // ARCHITECTURAL FEATURES]</span>
 			</div>
 			<h2 class="text-lg font-bold text-[var(--text-main)] sm:text-2xl">
-				Enforced rest, not voluntary suggestions.
+				Hard breaks. No dismiss button.
 			</h2>
 		</div>
 		<span class="text-xs text-[var(--text-dim)]">HARDWARE INTERRUPT MODEL</span>

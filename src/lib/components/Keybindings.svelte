@@ -62,9 +62,9 @@
 			<div
 				class="flex flex-wrap justify-between gap-2 border-t border-[var(--border-ui)] bg-[var(--bg-app)] px-4 py-2 text-xs text-[var(--text-dim)]"
 			>
-				<span>EMERGENCY UNLOCK: CTRL+C (SIGINT) RELEASES ALL DEVICES</span>
+				<span>INPUT RECOVERY: DEVICES AUTO-RELEASE ON TIMER FINISH OR APP EXIT</span>
 				<span class="font-bold text-[var(--color-primary)]"
-					>VT BACKUP: CTRL+ALT+F3 &gt; PKILL -F POMLOCK</span
+					>DURING LOCKDOWN: HARD RESTART (POWER BUTTON)</span
 				>
 			</div>
 		</div>

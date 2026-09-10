@@ -56,7 +56,6 @@
 				class="mt-4 flex justify-between border-t border-[var(--border-subtle)] pt-2 text-xs text-[var(--text-dim)]"
 			>
 				<span>SECTIONS: [general], [presets], [overlay]</span>
-				<span>HOT-RELOAD: YES</span>
 			</div>
 		</div>
 
