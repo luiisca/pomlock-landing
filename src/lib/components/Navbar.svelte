@@ -64,7 +64,7 @@
 				class="border-2 border-[var(--border-ui)] bg-[var(--bg-panel)] px-2.5 py-1 font-mono font-bold text-[var(--text-main)] transition-colors hover:bg-[var(--border-ui)] hover:text-[var(--bg-app)]"
 				aria-label="Toggle visual theme"
 			>
-				[{theme === ThemeMode.Dark ? '☀ LIGHT' : '☾ DARK'}]
+				[{theme === ThemeMode.Dark ? 'LIGHT' : 'DARK'}]
 			</button>
 		</nav>
 	</div>
