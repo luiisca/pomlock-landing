@@ -35,19 +35,8 @@
 			POMLOCK
 		</div>
 
-		<!-- Logo mark and giant typography -->
+		<!-- giant typography -->
 		<div class="relative z-10 flex w-full flex-col items-center">
-			<!-- Transparent pixel art logo -->
-			<div
-				class="tui-shadow-sm mb-3 inline-block border-2 border-[var(--border-ui)] bg-[var(--bg-app)] p-2"
-			>
-				<img
-					src="/images/logo_transparent.png"
-					alt="pomlock insignia"
-					class="pomlock-logo-img block h-8 w-auto object-contain sm:h-12"
-				/>
-			</div>
-
 			<!-- Giant screen-filling POMLOCK title like PORTAL in reference image -->
 			<h1
 				class="tui-portal-title text-4xl leading-none font-black text-[var(--color-primary)] uppercase select-none sm:text-7xl md:text-8xl lg:text-9xl"
