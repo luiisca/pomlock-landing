@@ -9,30 +9,6 @@
   font-display: swap;
 }
 
-/* Purple fade hero bg effect - from pnc-landing */
-.purple-fade,
-.purple-fade2 {
-  position: relative;
-  top: calc(-1 * var(--header-height));
-}
-
-.purple-fade:before {
-  transform: translateZ(0);
-  /* Trigger hardware acceleration */
-  position: absolute;
-  content: "";
-  z-index: -1;
-  right: -10%;
-  height: 100%;
-  width: 110%;
-  mix-blend-mode: color-dodge;
-  background:
-    var(--grain),
-    radial-gradient(circle farthest-corner at 0% 0%, #52297a 30%, #5c2e8a 65%, #663399 80%, #d1c2e0 110%) no-repeat,
-    radial-gradient(closest-side at 60% 50%, #d1c2e0 30%, #a385c2, 75%, #000 100%) no-repeat,
-    linear-gradient(155deg, #d1c2e0, #a385c2 17%, rgb(21, 21, 21) 90%) no-repeat;
-  background-blend-mode: overlay;
-}
 
 :root {
   --color-bg-dark: #023047;
@@ -40,8 +16,6 @@
   --color-primary: #fb8500;
   --color-accent: #ffb703;
   --color-cyan: #219ebc;
-  --header-height: 60px;
-  --header-height-scrolled: 60px;
 
   /* Default dark theme */
   --bg-app: #023047;
