@@ -109,9 +109,9 @@ export const FEATURES: readonly FeatureItem[] = [
   },
   {
     tag: 'BAR INTEGRATION',
-    title: 'Status bar JSON output',
+    title: 'Status bar JSON output & script callbacks',
     description:
-      'Writes live state to /tmp/pomlock.json every second. Connects directly to Waybar, Polybar, or your custom shell scripts.'
+      'Writes live state to /tmp/pomlock.json for Waybar/Polybar. Executes custom scripts on phase changes with JSON event data.'
   },
   {
     tag: 'ACTIVITIES & STREAKS',

@@ -72,7 +72,7 @@
 	});
 </script>
 
-<section class="border-b-2 border-[var(--border-ui)] bg-[var(--bg-app)] font-mono">
+<section class="border-b-2 border-[var(--border-ui)] bg-[var(--bg-app)] font-mono fade-in">
 	<!-- Top status line -->
 	<div
 		class="flex flex-wrap items-center justify-between gap-2 border-b-2 border-[var(--border-ui)] bg-[var(--bg-panel)] px-4 py-2 text-xs"
@@ -117,14 +117,14 @@
 					<button
 						type="button"
 						onclick={toggleTimer}
-						class="flex-1 border-2 border-[var(--color-primary)] bg-[var(--color-primary)] px-4 py-2 text-center text-xs font-bold text-[#023047] transition-colors hover:bg-[var(--color-accent)] sm:flex-none"
+						class="flex-1 border-2 border-[var(--color-primary)] bg-[var(--color-primary)] px-4 py-2 text-center text-xs font-bold text-[#023047] transition-all duration-200 hover:bg-[var(--color-accent)] hover:-translate-y-0.5 hover:shadow-sm sm:flex-none"
 					>
 						{isRunning ? '[ SPACE ] PAUSE' : '[ SPACE ] START'}
 					</button>
 					<button
 						type="button"
 						onclick={resetTimer}
-						class="flex-1 border border-[var(--border-ui)] bg-[var(--bg-panel)] px-4 py-2 text-center text-xs font-bold text-[var(--text-main)] transition-colors hover:bg-[var(--border-ui)] hover:text-[var(--bg-app)] sm:flex-none"
+						class="flex-1 border border-[var(--border-ui)] bg-[var(--bg-panel)] px-4 py-2 text-center text-xs font-bold text-[var(--text-main)] transition-all duration-200 hover:bg-[var(--color-accent)] hover:text-[var(--text-main)] hover:-translate-y-0.5 hover:shadow-sm sm:flex-none"
 					>
 						[ R ] RESET
 					</button>
@@ -135,7 +135,7 @@
 			<div class="space-y-2.5 border-2 border-[var(--border-ui)] bg-[var(--bg-panel)] p-4 text-xs">
 				<div class="flex justify-between border-b border-[var(--border-subtle)] pb-1.5">
 					<span class="font-bold text-[var(--text-dim)]">CYCLE:</span>
-					<span class="font-bold text-[var(--color-primary)]">{cycle} / 4</span>
+					<span class="font-bold text-[var(--color-primary)] pulse">{cycle} / 4</span>
 				</div>
 				<div class="flex justify-between border-b border-[var(--border-subtle)] pb-1.5">
 					<span class="font-bold text-[var(--text-dim)]">PRESET:</span>
@@ -146,7 +146,7 @@
 					<span
 						class={phase === TimerPhase.Break
 							? 'font-bold text-[var(--color-primary)]'
-							: 'text-[var(--text-main)]'}
+							: 'text-[var(--text-main)] pulse'}
 					>
 						{phase === TimerPhase.Break ? 'LOCKED (/dev/input)' : 'ARMED'}
 					</span>

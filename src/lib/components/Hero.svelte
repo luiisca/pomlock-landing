@@ -45,7 +45,7 @@
 	}
 </script>
 
-<section class="border-b-2 border-[var(--border-ui)] bg-[var(--bg-app)] font-mono">
+<section class="border-b-2 border-[var(--border-ui)] bg-[var(--bg-app)] font-mono fade-in">
 	<!-- Tabular 2-column boxed layout -->
 	<div
 		class="grid grid-cols-1 divide-y-2 divide-[var(--border-ui)] lg:grid-cols-2 lg:divide-x-2 lg:divide-y-0"

@@ -2,7 +2,7 @@
 	import { GITHUB_RELEASES, GITHUB_REPO, TERMINAL_TROVE_URL } from '$lib/constants';
 </script>
 
-<footer class="relative z-10 bg-[var(--bg-app)] py-6 font-mono text-xs text-[var(--text-main)]">
+<footer class="relative z-10 bg-[var(--bg-app)] py-6 font-mono text-xs text-[var(--text-main)] fade-in">
 	<div class="flex flex-col items-center justify-between gap-4 px-4 sm:flex-row">
 		<!-- Made with love message -->
 		<p

@@ -8,9 +8,25 @@
   "on-click": "/path/to/waybar.py left",
   "on-click-right": "/path/to/waybar.py right"
 }`;
+
+	const CALLBACK_JSON_SNIPPET = `{
+  "action": "pomodoro|short_break|long_break",
+  "time": 1500,
+  "start_time": 1725580800.0,
+  "crr-cycle": 1,
+  "total-cycles": 4,
+  "crr-session": 1
+}`;
+
+	const CALLBACK_CONFIG_SNIPPET = `callback = uv run /home/luisca/p/scripts/pomlock_brainfm.py`;
+
+	const CALLBACK_CLI_SNIPPET = `pomlock --callback /path/to/script.sh`;
 </script>
 
-<section id="config" class="border-b-2 border-[var(--border-ui)] bg-[var(--bg-app)] font-mono">
+<section
+	id="config"
+	class="fade-in border-b-2 border-[var(--border-ui)] bg-[var(--bg-app)] font-mono"
+>
 	<!-- Section header bar -->
 	<div
 		class="flex flex-col justify-between gap-2 border-b-2 border-[var(--border-ui)] bg-[var(--bg-panel)] px-4 py-3 sm:flex-row sm:items-center"
@@ -98,14 +114,42 @@
 				</div>
 			</div>
 
-			<div
-				class="mt-4 flex flex-wrap justify-between gap-1 border-t border-[var(--border-subtle)] pt-2 text-xs text-[var(--text-dim)]"
-			>
-				<span
-					>SCRIPT CALLBACK: <code class="font-bold text-[var(--text-main)]"
-						>pomlock --callback /path/to/script.sh</code
-					></span
+			<div class="mt-4 pt-4">
+				<div
+					class="mb-3 flex items-center justify-between border-b border-[var(--border-subtle)] pb-2 text-xs font-bold text-[var(--text-dim)]"
 				>
+					<span class="font-mono text-[var(--color-primary)]">SCRIPT CALLBACK</span>
+					<span>pomlock.conf</span>
+				</div>
+				<p class="mb-3 text-xs text-[var(--text-muted)]">
+					Set a <code class="font-bold text-[var(--color-primary)]">callback</code> command and pomlock
+					runs it on every phase change, passing a JSON object as the last argument:
+				</p>
+				<div
+					class="tui-shadow-sm mb-4 overflow-x-auto border-2 border-[var(--border-ui)] bg-[var(--bg-terminal)] p-3 text-xs text-[var(--terminal-muted)]"
+				>
+					<pre class="font-mono"><code>{CALLBACK_JSON_SNIPPET}</code></pre>
+				</div>
+
+				<p class="mb-2 text-xs text-[var(--text-muted)]">
+					Example callback in your <code class="font-bold text-[var(--color-primary)]"
+						>pomlock.conf</code
+					>:
+				</p>
+				<div
+					class="tui-shadow-sm overflow-x-auto border-2 border-[var(--border-ui)] bg-[var(--bg-terminal)] p-3 font-mono text-xs text-[var(--color-primary)]"
+				>
+					<pre><code>{CALLBACK_CONFIG_SNIPPET}</code></pre>
+				</div>
+
+				<p class="mt-4 mb-2 text-xs text-[var(--text-muted)]">
+					Or pass a script directly at launch:
+				</p>
+				<div
+					class="tui-shadow-sm overflow-x-auto border-2 border-[var(--border-ui)] bg-[var(--bg-terminal)] p-3 font-mono text-xs text-[var(--color-primary)]"
+				>
+					<pre><code>{CALLBACK_CLI_SNIPPET}</code></pre>
+				</div>
 			</div>
 		</div>
 	</div>

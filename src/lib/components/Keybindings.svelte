@@ -2,7 +2,7 @@
 	import { KEYBINDINGS } from '$lib/constants';
 </script>
 
-<section id="controls" class="border-b-2 border-[var(--border-ui)] bg-[var(--bg-app)] font-mono">
+<section id="controls" class="border-b-2 border-[var(--border-ui)] bg-[var(--bg-app)] font-mono fade-in">
 	<!-- Section header bar -->
 	<div
 		class="flex flex-col justify-between gap-2 border-b-2 border-[var(--border-ui)] bg-[var(--bg-panel)] px-4 py-3 sm:flex-row sm:items-center"
