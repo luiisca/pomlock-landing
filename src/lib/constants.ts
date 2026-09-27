@@ -9,7 +9,7 @@ export const GITHUB_RELEASES = 'https://github.com/luiisca/pomlock/releases';
 export const GITHUB_ISSUES = 'https://github.com/luiisca/pomlock/issues';
 export const TERMINAL_TROVE_URL = 'https://terminaltrove.com';
 
-export const TOOL_VERSION = "v4.0.5"
+export const TOOL_VERSION = "v4.1.0"
 
 export enum ThemeMode {
   Dark = 'dark',
