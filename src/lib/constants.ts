@@ -9,7 +9,7 @@ export const GITHUB_RELEASES = 'https://github.com/luiisca/pomlock/releases';
 export const GITHUB_ISSUES = 'https://github.com/luiisca/pomlock/issues';
 export const TERMINAL_TROVE_URL = 'https://terminaltrove.com';
 
-export const TOOL_VERSION = "v4.0.1"
+export const TOOL_VERSION = "v4.0.5"
 
 export enum ThemeMode {
   Dark = 'dark',
@@ -137,10 +137,20 @@ fifty_ten = 50 10 10 1
 
 [overlay]
 enabled = true
-font_size = 48
-color = white
-bg_color = black
+bg_color = #283618
 opacity = 0.8
+title_color = #fefae0
+# title_font_family = 
+title_font_size = 48
+# short_break_title = 
+# long_break_title = 
+font_size = 48
+color = #bc6c25
+inactive_segment_color = #606c38
+# msg = 
+msg_color = #fefae0
+# msg_font_family = 
+msg_font_size = 12
 
 [activities]
 auto_calc = false
