@@ -45,7 +45,7 @@
 	}
 </script>
 
-<section class="border-b-2 border-[var(--border-ui)] bg-[var(--bg-app)] font-mono fade-in">
+<section class="fade-in border-b-2 border-[var(--border-ui)] bg-[var(--bg-app)] font-mono">
 	<!-- Tabular 2-column boxed layout -->
 	<div
 		class="grid grid-cols-1 divide-y-2 divide-[var(--border-ui)] lg:grid-cols-2 lg:divide-x-2 lg:divide-y-0"
@@ -223,6 +223,10 @@
 					<div class="flex justify-between">
 						<span class="font-mono text-[var(--text-main)]">pomlock -a coding</span>
 						<span class="text-[var(--text-dim)]"># track activity goal</span>
+					</div>
+					<div class="flex justify-between">
+						<span class="font-mono text-[var(--text-main)]">pomlock --pause-button</span>
+						<span class="text-[var(--text-dim)]"># enable pause button</span>
 					</div>
 				</div>
 			</div>

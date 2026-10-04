@@ -56,10 +56,12 @@
 					<span>INI FORMAT</span>
 				</div>
 				<p class="mb-3 text-xs text-[var(--text-muted)]">
-					Edit directly in your text editor or inside the TUI app by pressing <kbd
+					Edit directly in your editor or inside the app by pressing <kbd
 						class="border border-[var(--border-ui)] bg-[var(--bg-panel)] px-1.5 py-0.5 font-bold text-[var(--color-primary)]"
 						>6</kbd
-					>.
+					>. Configure input locking, the
+					<code class="text-[var(--color-primary)]">pause_button</code> toggle, presets, and notification
+					hooks.
 				</p>
 				<div
 					class="tui-shadow-sm overflow-x-auto border-2 border-[var(--border-ui)] bg-[var(--bg-terminal)] p-4 text-xs leading-relaxed text-[var(--terminal-text)] sm:text-sm"
@@ -69,9 +71,10 @@
 			</div>
 
 			<div
-				class="mt-4 flex justify-between border-t border-[var(--border-subtle)] pt-2 text-xs text-[var(--text-dim)]"
+				class="mt-4 flex flex-wrap justify-between gap-1 border-t border-[var(--border-subtle)] pt-2 text-xs text-[var(--text-dim)]"
 			>
-				<span>SECTIONS: [general], [presets], [overlay]</span>
+				<span>[general]: block_input, pause_button, notify, callback</span>
+				<span>[presets] • [overlay] • [activities]</span>
 			</div>
 		</div>
 

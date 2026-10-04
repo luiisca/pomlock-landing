@@ -2,7 +2,10 @@
 	import { KEYBINDINGS } from '$lib/constants';
 </script>
 
-<section id="controls" class="border-b-2 border-[var(--border-ui)] bg-[var(--bg-app)] font-mono fade-in">
+<section
+	id="controls"
+	class="fade-in border-b-2 border-[var(--border-ui)] bg-[var(--bg-app)] font-mono"
+>
 	<!-- Section header bar -->
 	<div
 		class="flex flex-col justify-between gap-2 border-b-2 border-[var(--border-ui)] bg-[var(--bg-panel)] px-4 py-3 sm:flex-row sm:items-center"
@@ -58,6 +61,23 @@
 					{/each}
 				</tbody>
 			</table>
+
+			<div
+				class="border-t border-[var(--border-ui)] bg-[var(--bg-card)] px-4 py-2.5 text-xs text-[var(--text-muted)]"
+			>
+				<span class="font-bold text-[var(--color-primary)]">NOTE:</span>
+				Pause is disabled by default to make it harder to avoid breaks. Enable with
+				<code
+					class="border border-[var(--border-subtle)] bg-[var(--bg-panel)] px-1 font-bold text-[var(--color-primary)]"
+					>--pause-button</code
+				>
+				or
+				<code
+					class="border border-[var(--border-subtle)] bg-[var(--bg-panel)] px-1 font-bold text-[var(--color-primary)]"
+					>pause_button = true</code
+				>
+				in config.
+			</div>
 
 			<div
 				class="flex flex-wrap justify-between gap-2 border-t border-[var(--border-ui)] bg-[var(--bg-app)] px-4 py-2 text-xs text-[var(--text-dim)]"

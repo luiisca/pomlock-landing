@@ -9,7 +9,7 @@ export const GITHUB_RELEASES = 'https://github.com/luiisca/pomlock/releases';
 export const GITHUB_ISSUES = 'https://github.com/luiisca/pomlock/issues';
 export const TERMINAL_TROVE_URL = 'https://terminaltrove.com';
 
-export const TOOL_VERSION = "v4.1.0"
+export const TOOL_VERSION = "v4.2.1"
 
 export enum ThemeMode {
   Dark = 'dark',
@@ -64,7 +64,7 @@ export interface KeybindingItem {
 }
 
 export const KEYBINDINGS: readonly KeybindingItem[] = [
-  { key: 'Space', action: 'Pause or resume active timer' },
+  { key: 'Space', action: 'Pause or resume timer (when pause is enabled)' },
   { key: 's', action: 'Skip current interval' },
   { key: 'r', action: 'Reset current interval' },
   { key: 'z', action: 'Toggle zen view' },
@@ -123,6 +123,7 @@ export const FEATURES: readonly FeatureItem[] = [
 
 export const SAMPLE_CONFIG = `[general]
 block_input = true
+pause_button = false
 notify = true
 break_notify_msg = Time for a break!
 long_break_notify_msg = Time for a long break!
